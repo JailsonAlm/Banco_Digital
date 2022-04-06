@@ -8,6 +8,9 @@ public class Main {
 
         Conta cc = new ContaCorrente(jailson);
         Conta poupanca = new ContaPoupanca(jailson);
+        cc.depositar(100);
+        cc.transferir(100, poupanca);
+
 
         cc.imprimirExtrato();
         poupanca.imprimirExtrato();

@@ -1,6 +1,10 @@
 package desafio.dio.banco.entity;
 
 
+import lombok.Builder;
+
+
+@Builder
 public class ContaCorrente extends Conta {
 
 
@@ -8,8 +12,11 @@ public class ContaCorrente extends Conta {
         super(cliente);
     }
 
-    public ContaCorrente() {
+    public ContaCorrente(int agencia, int numero, double saldo, Cliente cliente) {
+        super(agencia, numero, saldo, cliente);
+    }
 
+    public ContaCorrente() {
     }
 
     @Override

@@ -1,6 +1,9 @@
 package desafio.dio.banco.entity;
 
+import lombok.Builder;
 
+
+@Builder
 public class ContaPoupanca extends Conta {
 
 
@@ -8,8 +11,11 @@ public class ContaPoupanca extends Conta {
         super(cliente);
     }
 
-    public ContaPoupanca() {
+    public ContaPoupanca(int agencia, int numero, double saldo, Cliente cliente) {
+        super(agencia, numero, saldo, cliente);
+    }
 
+    public ContaPoupanca() {
     }
 
     @Override

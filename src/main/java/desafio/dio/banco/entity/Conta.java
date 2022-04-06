@@ -1,9 +1,14 @@
 package desafio.dio.banco.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 // Pode deixar a classe abstrata te uma forma estratégica, quando não se quer que essa classe seja instanciada
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public abstract class Conta implements IConta {
 
     private static final int AGENCIA_PADRAO = 0001;
@@ -20,9 +25,6 @@ public abstract class Conta implements IConta {
         this.cliente = cliente;
     }
 
-    public Conta() {
-
-    }
 
     @Override
     public void sacar(double valor) {
